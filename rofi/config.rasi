@@ -1,5 +1,5 @@
 configuration {
-    font                : "Iosevka Nerd Font 12";
+    font                : "Iosevka Nerd Font 10";
     show-icons          : true;
     drun-display-format : "{name}";
     disable-history     : false;

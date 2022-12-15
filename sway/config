@@ -170,9 +170,9 @@ bindsym $mod+r mode "resize"
 
 ## Window Colors:
     #	       				<border> <background> <text>  <indicator>
-    client.focused 			#5e81ac  #5e81ac      #eceff4
-    client.focused_inactive		#2e3440  #4c566a      #d8dee9
-    client.unfocused			#2e3440  #434c5e      #d8dee9
+    client.focused 			#81a1c1  #5e81ac      #eceff4
+    client.focused_inactive		#4c566a  #4c566a      #d8dee9
+    client.unfocused			#4c566a  #434c5e      #d8dee9
     client.urgent			#2e3440  #bf616a      #eceff4
 
 ## Status Bar:

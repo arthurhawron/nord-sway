@@ -6,8 +6,8 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term kitty
-set $menu ~/.config/sway/launcher
+set $term alacritty
+set $menu rofi -show drun
 
 
 ############
@@ -19,7 +19,7 @@ font pango:Iosevka Nerd Font Bold 10
 ############################
 ### Output configuration ###
 ############################
-output * bg ~/Pictures/Wallpapers/underwater.png fill
+output * bg ~/Pictures/Wallpapers/T470-1.jpg fill
 output DP-1 resolution 1920x1080 position 1920,0
 
 
@@ -169,13 +169,14 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ## Window Colors:
-    #	       				<border> <background> <text>  <indicator>
-    client.focused 			#81a1c1  #5e81ac      #eceff4
-    client.focused_inactive		#4c566a  #4c566a      #d8dee9
-    client.unfocused			#4c566a  #434c5e      #d8dee9
-    client.urgent			#2e3440  #bf616a      #eceff4
+    #	       				        border    bg        text      indicator
+    client.focused 	        #81a1c1   #5e81ac   #eceff4
+    client.focused_inactive	#4c566a   #4c566a   #d8dee9
+    client.unfocused			  #4c566a   #434c5e   #d8dee9
+    client.urgent			      #2e3440   #bf616a   #eceff4
 
 ## Status Bar:
 	exec waybar
 
-include /etc/sway/config.d/*
+include /etc/sway/config.d/*:wq
+

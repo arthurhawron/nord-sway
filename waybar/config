@@ -15,14 +15,14 @@
         "sway/mode"
     ],
     "modules-center": [
-        "sway/window"
+        "clock#date",
+	"clock#time"
     ],
     "modules-right": [
         "pulseaudio",
-        "battery",
+        "battery#BAT0",
+	"battery#BAT1",
         "network",
-        "clock#date",
-        "clock#time"
     ],
 
 
@@ -30,27 +30,23 @@
     // Modules
     // -------------------------------------------------------------------------
 
-    "battery": {
+    "battery#BAT0": {
         "interval": 10,
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        // Connected to AC
-        "format": "  {icon}  {capacity}%", // Icon: bolt
-        // Not connected to AC
-        "format-discharging": "{icon}  {capacity}%",
-        "format-full": "{icon}  Full",
-        "format-icons": [
-            "", // Icon: battery-full
-            "", // Icon: battery-three-quarters
-            "", // Icon: battery-half
-            "", // Icon: battery-quarter
-            ""  // Icon: battery-empty
-        ],
+	      "bat": "BAT0",
+        "format": "BAT0: Charging {capacity}%", 
+        "format-discharging": "BAT0: Discharging {capacity}%",
+        "format-full": "BAT0: Full",
         "tooltip": true
     },
 
+    "battery#BAT1": {
+        "interval": 10,
+	      "bat": "BAT1",
+        "format": "BAT1: Charging {capacity}%", 
+        "format-discharging": "BAT1: Discharging {capacity}%",
+        "format-full": "BAT1: Full",
+        "tooltip": true
+    },
     "clock#time": {
         "interval": 1,
         "format": "  {:%H:%M:%S}",
@@ -114,11 +110,6 @@
         "disable-scroll": true,
         "format": "{icon} {name}",
         "format-icons": {
-            "1:www": "龜", // Icon: firefox-browser
-            "2:mail": "", // Icon: mail
-            "3:editor": "", // Icon: code
-            "4:terminals": "", // Icon: terminal
-            "5:portal": "", // Icon: terminal
             "urgent": "",
             "focused": "",
             "default": ""
@@ -139,7 +130,7 @@
             "car": "",
             "default": ["", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": ""
     },
 
     "temperature": {

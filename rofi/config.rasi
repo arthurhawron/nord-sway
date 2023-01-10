@@ -1,6 +1,6 @@
 configuration {
-    font                : "Iosevka Nerd Font 10";
-    show-icons          : true;
+    font                : "Iosevka Nerd Font 11";
+    show-icons          : false;
     drun-display-format : "{name}";
     disable-history     : false;
     fullscreen          : true;
